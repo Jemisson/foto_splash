@@ -1,0 +1,159 @@
+/* Estilos gerais */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilizção dos cards */
+
+.card-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  padding: 10px;
+}
+
+.card {
+  width: 30%;
+  margin: 20px;
+}
+
+/* Barra de navegação */
+
+.navbar,
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-right: 20px;
+  width: 10rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  line-height: 50px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #555;
+  border-bottom: solid 3px green;
+}
+
+/* Menu responsivo */
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* footer */
+.social{
+  text-align: center;
+  border-left: solid 3px green;
+  padding: 5px 20px;
+}
+.social-icon{
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+/* Estilos responsivos */
+/* Tela grande (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .card {
+      width: 33%; /* 3 cards em telas grandes */
+      margin: 0;
+      padding: 10px;
+    }
+  }
+  
+  /* Tela média (até 900px) */
+@media screen and (max-width: 900px) {
+  .card {
+    width: 50%; /* 2 cards em telas médias */
+  }
+}
+  
+/* Tela pequena (até 600px) */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%; /* 1 card em telas pequenas */
+  }
+
+  /* Barra de navegação */
+  .menu-toggle {
+      display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    width: 170px;
+    z-index: 1;
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu li:hover {
+    border-left: solid 8px #94a500;
+  }
+}
