@@ -10,6 +10,35 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+/* Estilizção do Carousel */
+
+.main_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.title_carrossel {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  font-size: max(48px, min(5vw, 76px));
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.carousel_container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel_img {
+  width: 100%;
+  height: 500px;
+  object-fit: fill;
 }
 
 /* Estilizção dos cards */
@@ -17,13 +46,29 @@ body {
 .card-list {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  margin-top: 3rem;
+}
+
+.card-list title {
+  color: #333;
 }
 
 .card {
   float: left;
   box-sizing: border-box;
   border: 1px solid #ccc;
+  width: 30%;
+  height: 330px;
+  margin: 20px;
+  box-shadow: 10px 5px 5px rgb(160, 160, 160);
+}
+
+.card .image {
+  height: 200px;
+}
+
+.content {
+  padding: 10px;
 }
 
 .image {
@@ -33,25 +78,33 @@ body {
   background-repeat: no-repeat;
 }
 
-.content {
-  padding: 10px;
-}
-
-.card {
-  width: 30%;
-  margin: 20px;
+.rounded-image {
+  padding-top: 10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
 
 /* Barra de navegação */
 
-.navbar,
-footer {
+.navbar {
   background-color: #333;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  flex-wrap: nowrap !important;
+}
+
+.footer_container {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: nowrap !important;
 }
 
 .navbar-header {
@@ -86,7 +139,7 @@ footer {
 
 .menu li:hover {
   background-color: #555;
-  border-bottom: solid 3px green;
+  border-bottom: solid 3px rgb(160, 160, 160);
 }
 
 /* Menu responsivo */
@@ -100,12 +153,14 @@ footer {
 }
 
 /* footer */
-.social{
+.social {
   text-align: center;
-  border-left: solid 3px green;
+  border-left: solid 1px rgb(160, 160, 160);
   padding: 5px 20px;
+  cursor: pointer;
 }
-.social-icon{
+
+.social-icon {
   font-size: 1.5rem;
   padding-right: 10px;
 }
@@ -114,19 +169,19 @@ footer {
 /* Tela grande (até 1200px) */
 @media screen and (max-width: 1200px) {
   .card {
-      width: 33%; /* 3 cards em telas grandes */
-      margin: 0;
-      padding: 10px;
-    }
+    width: 33%; /* 3 cards em telas grandes */
+    margin: 0;
+    padding: 10px;
   }
-  
-  /* Tela média (até 900px) */
+}
+
+/* Tela média (até 900px) */
 @media screen and (max-width: 900px) {
   .card {
     width: 50%; /* 2 cards em telas médias */
   }
 }
-  
+
 /* Tela pequena (até 600px) */
 @media screen and (max-width: 600px) {
   .card {
@@ -135,7 +190,7 @@ footer {
 
   /* Barra de navegação */
   .menu-toggle {
-      display: block;
+    display: block;
   }
 
   .menu {
@@ -150,7 +205,7 @@ footer {
   }
 
   .menu.show {
-      display: flex;
+    display: flex;
   }
 
   .menu li:hover {
