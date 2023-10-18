@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="./assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <title>Foto Splash</title>
@@ -29,56 +29,67 @@
 
   </nav>
 
-  <div class="card-list clearfix">
+  <div class="parallax-container">
     <div class="card">
-      <div class="image" style="background-image: url('assets/image/casa-de-praia.jpg');"></div>
+      <div class="image" data-depth="0.2" style="background-image: url('assets/image/casa-de-praia.jpg');"></div>
       <div class="content">
         <h2>Férias na praia</h2>
         <p>Uma recordação para a vida!</p>
       </div>
     </div>
+  </div>
 
+  <div class="parallax-container">
     <div class="card">
-      <div class="image" style="background-image: url('assets/image/casa-de-campo.jpeg');"></div>
+      <div class="image" data-depth="0.2" style="background-image: url('assets/image/casa-de-campo.jpeg');"></div>
       <div class="content">
         <h2>Casa no campo</h2>
         <p>Fim de semana com tranquilidade!</p>
       </div>
     </div>
+  </div>
 
+  <div class="parallax-container">
     <div class="card">
-      <div class="image" style="background-image: url('assets/image/casa.jpg');"></div>
-      <div class="content">
-        <h2>Seu novo lar</h2>
-        <p>Fotos em 360 graus!</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="image" style="background-image: url('assets/image/festas.jpg');"></div>
+      <div class="image" data-depth="0.2" style="background-image: url('assets/image/festas.jpg');"></div>
       <div class="content">
         <h2>Eventos</h2>
         <p>Guarde os momentos incríveis aleḿ da lembrança</p>
       </div>
     </div>
+  </div>
 
+  
+  <div class="parallax-container">
     <div class="card">
-      <div class="image" style="background-image: url('assets/image/especialista.jpg');"></div>
+      <div class="image" data-depth="0.2" style="background-image: url('assets/image/casa.jpg');"></div>
+      <div class="content">
+        <h2>Seu novo lar</h2>
+        <p>Fotos em 360 graus!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <div class="card">
+      <div class="image" data-depth="0.2" style="background-image: url('assets/image/especialista.jpg');"></div>
       <div class="content">
         <h2>Fotos corporativas</h2>
         <p>Uma nova aparência.</p>
       </div>
     </div>
+  </div>
 
+  <div class="parallax-container">
     <div class="card">
-      <div class="image" style="background-image: url('assets/image/formatura.jpeg');"></div>
+      <div class="image" data-depth="0.2" style="background-image: url('assets/image/formatura.jpeg');"></div>
       <div class="content">
         <h2>Formatura</h2>
         <p>Momentos incríveis merecem fotos incríveis!</p>
       </div>
     </div>
-
   </div>
+
 
   <footer>
     <img src="assets/image/logo.png" alt="Logo da foto splash" class="logo">
@@ -91,7 +102,14 @@
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <script src="assets/simpleParallax.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new simpleParallax(document.querySelectorAll('.image'), {
+        scale: 1.5
+      });
+    });
+  </script>
 </body>
 
 </html>
