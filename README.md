@@ -1,10 +1,8 @@
-# Projeto de Gerência de Projetos em TI - IFMS
-
-Bem-vindo ao repositório de estudos da disciplina de Gerência de Projetos em TI no Instituto Federal de Mato Grosso do Sul (IFMS). Este projeto foi criado para auxiliar os alunos na realização de estudos relacionados à disciplina, fornecendo recursos e materiais relevantes.
+# Projeto de Tópicos Especiais em Computação 1 - UEMS
 
 ## Objetivo
 
-O objetivo principal deste repositório é proporcionar um ambiente colaborativo para os alunos compartilharem informações, trabalhos e materiais relacionados à disciplina de Gerência de Projetos em TI.
+O objetivo principal deste repositório é proporcionar um ambiente colaborativo para os alunos compartilharem informações, trabalhos e materiais relacionados à disciplina.
 
 ## Contribuição
 
@@ -14,7 +12,7 @@ Sua contribuição é valiosa! Sinta-se à vontade para:
 - Participar de projetos colaborativos.
 - Reportar problemas ou sugerir melhorias.
 
-Vamos tornar este repositório um recurso valioso para todos os alunos da disciplina de Gerência de Projetos em TI no IFMS.
+Vamos tornar este repositório um recurso valioso para todos os alunos da disciplina.
 
 ## Como Contribuir
 
